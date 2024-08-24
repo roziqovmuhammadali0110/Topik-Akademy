@@ -126,5 +126,9 @@
   "study_work_abroad": "Janubiy Koreya davlatida o’qish va ishlash uchun ketmoqchisiz",
   "improve_skills": "Koreys tilini o’rta darajda bilasiz va darajangizni oshirmoqchisiz",
   "struggle_results": "Ko’p yillardan buyon o’qib ham natijaga chiqa olmayapsiz",
-  "cta_text": "HA, BU MEN"
+  "cta_text": "HA, BU MEN",
+  "closeButton": "Yopish",
+  "button_text": "Bepul darsga yozilish",
+  "modal_title": "Intensive",
+  "modal_text": "Bepul darsga o'z joyingizni band qilish uchun ma'lumotlaringizni qoldiring va biz siz bilan tez orada bog'lanamiz"
 }

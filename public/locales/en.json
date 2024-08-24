@@ -126,5 +126,9 @@
   "study_work_abroad": "Want to study and work in South Korea",
   "improve_skills": "Know Korean at an intermediate level and want to improve your skills",
   "struggle_results": "Have been studying for years but still can't achieve results",
-  "cta_text": "YES, THIS IS ME"
+  "cta_text": "YES, THIS IS ME",
+  "closeButton": "Close",
+  "button_text": "Sign up for a free class",
+  "modal_title": "Intensive",
+  "modal_text": "To reserve your place on a free lesson, leave your details and we'll get back to you shortly"
 }
