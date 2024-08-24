@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -10,6 +13,14 @@ const Navbar = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+  const handleChange = (event) => {
+    const selectedLanguage = event.target.value;
+    i18n.changeLanguage(selectedLanguage);
+    localStorage.setItem("i18nextLng", selectedLanguage); // Saqlash
+  };
+
+  const language = localStorage.getItem("i18nextLng") || "uz";
 
   return (
     <div className="fixed top-0 left-0 right-0 bg-white shadow-md z-50 flex items-center justify-between xs:px-3 xl:px-10 px-10 py-5 2xl:px-10">
@@ -25,20 +36,25 @@ const Navbar = () => {
       </div>
       <ul className="flex items-center justify-between xl:gap-4 2xl:gap-7 xs:hidden xl:flex">
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#topik">Nega biz</a>
+          <a href="#topik">{t("Nega biz")}</a>
         </li>
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#natija">Natijalar</a>
+          <a href="#natija">{t("Natijalar")}</a>
         </li>
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#kurs">Kurslar</a>
+          <a href="#kurs">{t("Kurslar")}</a>
         </li>
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#savollar">Ko’p beriladigan savollar</a>
+          <a href="#savollar">{t("Ko’p beriladigan savollar")}</a>
         </li>
       </ul>
       <div className="flex items-center gap-7">
-        <select className="w-[100px] h-8 rounded-lg font-bold px-2 bg-slate-100 border-none outline-none text-slate-700">
+        <select
+          value={language}
+          name="Lng"
+          id="lng"
+          onChange={handleChange}
+          className="w-[100px] h-8 rounded-lg font-bold px-2 bg-slate-100 border-none outline-none text-slate-700">
           <option value="ru">Russian</option>
           <option value="uz">Uzbek</option>
         </select>
@@ -84,26 +100,26 @@ const Navbar = () => {
             </button>
             <ul className="mt-8 text-[15px] font-medium">
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#topik">Nega biz</a>
+                <a href="#topik">{t("Nega biz")}</a>
               </li>
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#natija">Natijalar</a>
+                <a href="#natija">{t("Natijalar")}</a>
               </li>
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#kurs">Kurslar</a>
+                <a href="#kurs">{t("Kurslar")}</a>
               </li>
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#savollar">Ko’p beriladigan savollar</a>
+                <a href="#savollar">{t("Ko’p beriladigan savollar")}</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <div className="flex items-center flex-col justify-center xs:hidden md:flex">
-        <button className="font-medium xs:text-[14px] md:text-16px lg:text-[18px] text-[18px]">
+        <button className="font-medium xs:text-[14px] md:text-[16px] lg:text-[18px] text-[18px]">
           <a href="#">+998 (90) 062 4341</a>
         </button>
-        <button className="font-normal xs:text-[14px] md:text-16px lg:text-[18px] text-[18px]">
+        <button className="font-normal xs:text-[14px] md:text-[16px] lg:text-[18px] text-[18px]">
           <a href="#">Hoziroq bog’laning</a>
         </button>
       </div>
