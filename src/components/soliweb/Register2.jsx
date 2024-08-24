@@ -51,7 +51,9 @@ const Register2 = () => {
   };
 
   return (
-    <div className="w-full py-5 flex items-center justify-center">
+    <div
+      className="w-full py-5 flex items-center justify-center"
+      id="register2">
       <div className="w-[80%] xs:w-[100%] xl:w-[90%] 2xl:w-[80%] xs:py-4 lg:py-0 lg:h-[320px] rounded-2xl bg-[#D0ECE9] flex xs:flex-col lg:flex-row items-center justify-between">
         <div className="lg:w-[50%] items-center justify-center flex flex-col space-y-7 p-5 text-center lg:text-left">
           <h1 className="text-[40px] xs:text-[30px] md:text-[35px] lg:text-[40px] font-medium w-full lg:w-[300px]">

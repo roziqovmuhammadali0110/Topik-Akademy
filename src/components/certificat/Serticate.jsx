@@ -5,7 +5,7 @@ import LeftCarusel from "./LeftCarusel";
 const Serticate = () => {
   const { t } = useTranslation();
   return (
-    <div className="space-y-10 py-10" id="natija">
+    <div className="space-y-10 py-10" id="results">
       <div className="w-full flex items-center justify-center">
         <h1 className="text-[46px] xs:text-[25px] font-medium md:text-[35px] xl:text-[46px] leading-10 text-center ">
           {t("up_to")}

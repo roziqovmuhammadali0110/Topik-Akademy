@@ -37,7 +37,7 @@ const Topik = () => {
   ];
 
   return (
-    <div className="space-y-10" id="topik">
+    <div className="space-y-10" id="why">
       <div className="w-full flex items-center justify-center">
         <h1 className="text-[46px] xs:text-[25px] font-medium md:text-[35px] xl:text-[46px] leading-10 text-center">
           {t("topik_title")}

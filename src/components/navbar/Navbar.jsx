@@ -36,16 +36,16 @@ const Navbar = () => {
       </div>
       <ul className="flex items-center justify-between xl:gap-4 2xl:gap-7 xs:hidden xl:flex">
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#topik">{t("why_us")}</a>
+          <a href="#why">{t("why_us")}</a>
         </li>
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#natija">{t("results")}</a>
+          <a href="#results">{t("results")}</a>
         </li>
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#kurs">{t("courses")}</a>
+          <a href="#courses">{t("courses")}</a>
         </li>
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#savollar">{t("faq")}</a>
+          <a href="#faq">{t("faq")}</a>
         </li>
       </ul>
       <div className="flex items-center gap-7">
@@ -100,16 +100,16 @@ const Navbar = () => {
             </button>
             <ul className="mt-8 text-[15px] font-medium">
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#topik">{t("why_us")}</a>
+                <a href="#why">{t("why_us")}</a>
               </li>
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#natija">{t("results")}</a>
+                <a href="#results">{t("results")}</a>
               </li>
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#kurs">{t("courses")}</a>
+                <a href="#courses">{t("courses")}</a>
               </li>
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#savollar">{t("faq")}</a>
+                <a href="#faq">{t("faq")}</a>
               </li>
             </ul>
           </div>
@@ -117,10 +117,10 @@ const Navbar = () => {
       </div>
       <div className="flex items-center flex-col justify-center xs:hidden md:flex">
         <button className="font-medium xs:text-[14px] md:text-[16px] lg:text-[18px] text-[18px]">
-          <a href="#">+998 (90) 062 4341</a>
+          <a href="#register2">+998 (90) 062 4341</a>
         </button>
         <button className="font-normal xs:text-[14px] md:text-[16px] lg:text-[18px] text-[18px]">
-          <a href="#">{t("contact_now")}</a>
+          <a href="#register2">{t("contact_now")}</a>
         </button>
       </div>
     </div>

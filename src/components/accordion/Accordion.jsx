@@ -6,7 +6,9 @@ import PropTypes from "prop-types";
 const AccordionItem = ({ isOpen, toggleAccordion, titleKey, contentKey }) => {
   const { t } = useTranslation();
   return (
-    <div className="border-t-2 border-gray-300 mb-2 xs:w-[100%] md:w-[85%] xl:w-[80%]">
+    <div
+      className="border-t-2 border-gray-300 mb-2 xs:w-[100%] md:w-[85%] xl:w-[80%]"
+      id="faq">
       <button
         onClick={toggleAccordion}
         className="w-full text-left px-4 py-4 hover:bg-gray-300 flex items-center justify-between">
