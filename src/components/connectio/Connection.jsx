@@ -1,42 +1,46 @@
-const text = [
-  {
-    id: "01",
-    title: "Professional ustozlar",
-    text: "Sizga 4 yildan ortiq tajribaga va Topik darajasi 6 bo'lgan o'qituvchilar dars beradi."
-  },
-  {
-    id: "02",
-    title: "Bepul coworking zonalar",
-    text: "Erkin dars qilish, netvorking va o'z ustingizda ishlash uchun bepul coworking zonalarimiz mavjud"
-  },
-  {
-    id: "03",
-    title: "Haftalik tadbirlar",
-    text: "Topik akademy jamoasi o'quvchilari uchun doimiy ravishda qo'shimcha tadbirlar tashkillab keladi"
-  },
-  {
-    id: "04",
-    title: "Bepul sinov imtihonlari",
-    text: "Har oy davomida tashkillanadigan sinov imtihonlarida qatnashib o'z darajangizni bilib borasiz"
-  },
-  {
-    id: "05",
-    title: "Yordamchi kuratorlar",
-    text: "Darslarni o'zlashtirishda qiyinchilik bo'lsa sizga yordam beradigan kuratoringiz bo'ladi"
-  },
-  {
-    id: "06",
-    title: "Konsulting xizmatlar",
-    text: "Muvafaqqiyatli bitirgan talabalarimizga Janubiy Koreyadao'qish uchun visa olishda, universitet tanlash va grand yutishda yordam beramiz"
-  }
-];
+import { useTranslation } from "react-i18next";
 
 const Connection = () => {
+  const { t } = useTranslation();
+
+  const text = [
+    {
+      id: "01",
+      titleKey: "connection.item1.title",
+      textKey: "connection.item1.text"
+    },
+    {
+      id: "02",
+      titleKey: "connection.item2.title",
+      textKey: "connection.item2.text"
+    },
+    {
+      id: "03",
+      titleKey: "connection.item3.title",
+      textKey: "connection.item3.text"
+    },
+    {
+      id: "04",
+      titleKey: "connection.item4.title",
+      textKey: "connection.item4.text"
+    },
+    {
+      id: "05",
+      titleKey: "connection.item5.title",
+      textKey: "connection.item5.text"
+    },
+    {
+      id: "06",
+      titleKey: "connection.item6.title",
+      textKey: "connection.item6.text"
+    }
+  ];
+
   return (
     <div className="space-y-[120px] py-5">
       <div className="w-full flex items-center justify-center">
         <h1 className="text-[46px] xs:text-[25px] font-medium md:text-[35px] xl:text-[46px] leading-10 text-center ">
-          Nima uchun aynan TOPIK academy?
+          {t("connection.title")}
         </h1>
       </div>
 
@@ -50,9 +54,9 @@ const Connection = () => {
               <h1>{item.id}</h1>
             </div>
             <h2 className="text-xl font-semibold text-[#3E3E3E]">
-              {item.title}
+              {t(item.titleKey)}
             </h2>
-            <p className="mt-2 text-md text-[#3E3E3E]">{item.text}</p>
+            <p className="mt-2 text-md text-[#3E3E3E]">{t(item.textKey)}</p>
           </div>
         ))}
       </div>

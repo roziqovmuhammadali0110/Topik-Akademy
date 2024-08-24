@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 const VideoPlayer = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="w-full h-[500px] pb-10">
       <iframe
@@ -10,10 +14,7 @@ const VideoPlayer = () => {
         allowFullScreen
         title="YouTube video"></iframe>
       <div className="w-full p-3 bg-[#323232] text-white text-[28px] xs:text-[12px] md:text-[18px] xl:text-[28px]">
-        <h1>
-          GKS granti haqida to’liq siz uchun tayyorlagan video suhbatimizda
-          bilib oling! ...
-        </h1>
+        <h1>{t("videoPlayer.description")}</h1>
       </div>
     </div>
   );

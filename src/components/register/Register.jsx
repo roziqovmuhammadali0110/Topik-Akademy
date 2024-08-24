@@ -1,12 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 const Register = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="space-y-20" id="kurs">
       <div className="w-full flex items-center justify-center">
-        <h1 className="text-[46px] xs:text-[25px] font-medium md:text-[35px] xl:text-[46px] leading-10 text-center ">
-          O’zingizga mos kursga ro’yxatdan o’ting
+        <h1 className="text-[46px] xs:text-[25px] font-medium md:text-[35px] xl:text-[46px] leading-10 text-center">
+          {t("register.title")}
         </h1>
       </div>
-      <div className=" flex-wrap flex items-center justify-around space-y-3">
+      <div className="flex-wrap flex items-center justify-around space-y-3">
         <div className="w-[350px] h-[410px] rounded-[45px] bg-[#F7F7F7] p-3">
           <div className="w-full">
             <img
@@ -18,24 +22,22 @@ const Register = () => {
           <div className="space-y-4">
             <div className="w-full flex items-center justify-between">
               <h4 className="text-[28px] font-medium text-[#4B4B4B]">
-                Intiensive
+                {t("register.courses.intensive.title")}
               </h4>
               <p className="w-36 text-white text-[14px] p-2 text-center font-medium rounded-3xl bg-[#61ABA7]">
-                Davomiyligi: 5 oy
+                {t("register.courses.intensive.duration")}
               </p>
             </div>
             <p className="text-[#444444] w-[70%] text-[14px] font-medium">
-              <span className="text-[#E5B207]">Koreys tilini</span> chuqur
-              o’zlashtirmoqchi bo’lganlar uchun haftada 6 kun 1.5 soatdan
-              intensive kurs.
+              {t("register.courses.intensive.description")}
             </p>
             <div>
               <div className="w-full flex items-center justify-between">
                 <button className="w-44 text-white text-[12px] p-3 shadow-lg text-center font-medium rounded-3xl bg-[#61ABA7]">
-                  RO’YXATDAN O’TISH
+                  {t("register.courses.intensive.button")}
                 </button>
                 <h4 className="text-[17px] font-medium text-[#6BAAA8]">
-                  970.000 so’m /oy
+                  {t("register.courses.intensive.price")}
                 </h4>
               </div>
             </div>
@@ -51,21 +53,23 @@ const Register = () => {
           </div>
           <div className="space-y-4">
             <div className="w-full flex items-center justify-between">
-              <h4 className="text-[28px] font-medium text-[#4B4B4B]">Odatiy</h4>
+              <h4 className="text-[28px] font-medium text-[#4B4B4B]">
+                {t("register.courses.standard.title")}
+              </h4>
               <p className="w-36 text-white text-[14px] p-2 text-center font-medium rounded-3xl bg-[#61ABA7]">
-                Davomiyligi: 5 oy
+                {t("register.courses.standard.duration")}
               </p>
             </div>
             <p className="text-[#444444] w-[50%] text-[14px] font-medium">
-              Haftada 3 kun 1.5 soatdan iborat odatiy Koreys tili darslari.
+              {t("register.courses.standard.description")}
             </p>
             <div>
               <div className="w-full flex items-center justify-between">
                 <button className="w-44 text-white text-[12px] p-3 shadow-lg text-center font-medium rounded-3xl bg-[#61ABA7]">
-                  RO’YXATDAN O’TISH
+                  {t("register.courses.standard.button")}
                 </button>
                 <h4 className="text-[17px] font-medium text-[#6BAAA8]">
-                  560.000 so’m /oy
+                  {t("register.courses.standard.price")}
                 </h4>
               </div>
             </div>
@@ -82,24 +86,22 @@ const Register = () => {
           <div className="space-y-4">
             <div className="w-full flex items-center justify-between">
               <h4 className="text-[28px] font-medium text-[#4B4B4B]">
-                Individual
+                {t("register.courses.individual.title")}
               </h4>
               <p className="w-36 text-white text-[14px] p-2 text-center font-medium rounded-3xl bg-[#61ABA7]">
-                Davomiyligi: 5 oy
+                {t("register.courses.individual.duration")}
               </p>
             </div>
             <p className="text-[#444444] w-[95%] text-[14px] font-medium">
-              O’qituvchidan<span className="text-[#E5B207]"> individual</span>{" "}
-              dars olmoqchi bo’lganlar uchun haftada 3 kun 1.5 soatdan darslar.
-              Moslashuvchan grafik va individual yondashuv.
+              {t("register.courses.individual.description")}
             </p>
             <div>
               <div className="w-full flex items-center justify-between">
                 <button className="w-44 text-white text-[12px] p-3 shadow-lg text-center font-medium rounded-3xl bg-[#61ABA7]">
-                  RO’YXATDAN O’TISH
+                  {t("register.courses.individual.button")}
                 </button>
                 <h4 className="text-[17px] font-medium text-[#6BAAA8]">
-                  1.800.000 so’m /oy
+                  {t("register.courses.individual.price")}
                 </h4>
               </div>
             </div>

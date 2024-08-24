@@ -36,16 +36,16 @@ const Navbar = () => {
       </div>
       <ul className="flex items-center justify-between xl:gap-4 2xl:gap-7 xs:hidden xl:flex">
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#topik">{t("Nega biz")}</a>
+          <a href="#topik">{t("why_us")}</a>
         </li>
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#natija">{t("Natijalar")}</a>
+          <a href="#natija">{t("results")}</a>
         </li>
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#kurs">{t("Kurslar")}</a>
+          <a href="#kurs">{t("courses")}</a>
         </li>
         <li className="hover:font-bold font-medium lg:text-[14px] xl:text-[16px] hover:text-blue-600 hover:underline hover:text-[19px] text-[#333333]">
-          <a href="#savollar">{t("Ko’p beriladigan savollar")}</a>
+          <a href="#savollar">{t("faq")}</a>
         </li>
       </ul>
       <div className="flex items-center gap-7">
@@ -55,7 +55,7 @@ const Navbar = () => {
           id="lng"
           onChange={handleChange}
           className="w-[100px] h-8 rounded-lg font-bold px-2 bg-slate-100 border-none outline-none text-slate-700">
-          <option value="ru">Russian</option>
+          <option value="ru">English</option>
           <option value="uz">Uzbek</option>
         </select>
 
@@ -100,16 +100,16 @@ const Navbar = () => {
             </button>
             <ul className="mt-8 text-[15px] font-medium">
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#topik">{t("Nega biz")}</a>
+                <a href="#topik">{t("why_us")}</a>
               </li>
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#natija">{t("Natijalar")}</a>
+                <a href="#natija">{t("results")}</a>
               </li>
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#kurs">{t("Kurslar")}</a>
+                <a href="#kurs">{t("courses")}</a>
               </li>
               <li onClick={closeMenu} className="p-4 border-b">
-                <a href="#savollar">{t("Ko’p beriladigan savollar")}</a>
+                <a href="#savollar">{t("faq")}</a>
               </li>
             </ul>
           </div>
@@ -120,7 +120,7 @@ const Navbar = () => {
           <a href="#">+998 (90) 062 4341</a>
         </button>
         <button className="font-normal xs:text-[14px] md:text-[16px] lg:text-[18px] text-[18px]">
-          <a href="#">Hoziroq bog’laning</a>
+          <a href="#">{t("contact_now")}</a>
         </button>
       </div>
     </div>
